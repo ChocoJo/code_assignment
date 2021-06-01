@@ -3,11 +3,10 @@ import { BrowserView } from "react-device-detect";
 import "./Toggle.css";
 
 export const Toggle = ({ displayGrid, setDisplayGrid }) => {
-  const gridButton = document.querySelector("#display-grid");
-  const listButton = document.querySelector("#display-list");
 
   const toggleOff = (isEnabled) => {
     if (isEnabled !== displayGrid) {
+      console.log('toggleOn: isEnabled =', isEnabled, ' displayGrid=',displayGrid);
       setDisplayGrid(isEnabled);
       setGridToSelected()
     }
@@ -15,6 +14,7 @@ export const Toggle = ({ displayGrid, setDisplayGrid }) => {
 
   const toggleOn = (isEnabled) => {
     if (isEnabled !== displayGrid) {
+      console.log('toggleOff: isEnabled =', isEnabled, ' displayGrid=',displayGrid);      
       setDisplayGrid(isEnabled);
       setListToSelected();
     }
@@ -31,11 +31,17 @@ export const Toggle = ({ displayGrid, setDisplayGrid }) => {
   };
 
   const setButtonStatusToSelected = () => {
+  const gridButton = document.querySelector("#display-grid");
+  const listButton = document.querySelector("#display-list");
+
     gridButton.setAttribute('aria-pressed', !displayGrid);
     listButton.setAttribute('aria-pressed', displayGrid);
   }
 
   const setStyleForSelectedButton = () => {
+    const gridButton = document.querySelector("#display-grid");
+    const listButton = document.querySelector("#display-list");
+
     gridButton.setAttribute('data-selected', !displayGrid);
     listButton.setAttribute('data-selected', displayGrid);
   }

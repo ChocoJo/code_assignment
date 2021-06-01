@@ -2,21 +2,21 @@ import React from "react";
 import { DisplayGrid } from "../display/grid/DisplayGrid";
 import { DisplayList } from "../display/list/DisplayList";
 import { Toggle } from "../toggle/Toggle";
-import './Dashboard.css';
+import "./Dashboard.css";
 
-export const Dashboard = ({ displayGrid, setDisplayGrid }) => {
+export const Dashboard = ({ displayGrid, setDisplayGrid, employees }) => {
   return (
     <>
-    <div className="dashboard-container">
-      <Toggle displayGrid={displayGrid} setDisplayGrid={setDisplayGrid} />
-    </div>
-          <div>
-          {displayGrid ? (
-            <DisplayGrid/>
-          ) : (
-            <DisplayList />
-          )}
-        </div>
-        </>
+      <div className="dashboard-container">
+        <Toggle displayGrid={displayGrid} setDisplayGrid={setDisplayGrid} />
+      </div>
+      <div>
+        {displayGrid ? (
+          <DisplayGrid employees={employees} />
+        ) : (
+          <DisplayList employees={employees} />
+        )}
+      </div>
+    </>
   );
 };

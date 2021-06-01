@@ -16,13 +16,20 @@ export const HomeView = () => {
   };
 
   useEffect(() => {
-   // getAllEmployees();
+   getAllEmployees();
   }, []);
 
   return (
-    <Dashboard
+    <>
+    {employees.data ? 
+    (<Dashboard
       displayGrid={displayGrid}
       setDisplayGrid={setDisplayGrid}
-    />
+      employees={employees.data}
+    />) 
+    : (
+      <h1>Loading...</h1>
+    )}
+    </>
   );
 };
