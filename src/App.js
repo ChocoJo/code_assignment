@@ -1,13 +1,13 @@
 import "bootstrap/dist/css/bootstrap.min.css";
-import { Card } from "./components/card/Card";
 import { Navigation } from "./components/navigation/Navigation";
 import './utils/css/Global.css';
+import { HomeView } from "./views/HomeView";
 
 function App() {
   return (
     <div className="App">
       <Navigation/>
-      <Card/>
+      <HomeView/>
     </div>
   );
 }

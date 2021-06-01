@@ -1,0 +1,8 @@
+[data-selected="true"], [data-selected="true"]:hover  {
+    color: #80C565;
+    transform: scale(1.2);
+}
+
+[data-selected="false"], [data-selected="false"]:hover  {
+    color: #fff;
+}

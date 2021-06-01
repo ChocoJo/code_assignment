@@ -1,0 +1,5 @@
+.dashboard-container {
+    display: flex;
+    justify-content: center;
+    background: linear-gradient(90deg, #002B55	 0%,#013a72	100%);
+}
