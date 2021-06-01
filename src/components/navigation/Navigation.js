@@ -6,7 +6,7 @@ export const Navigation = () => {
     return (
         <nav className="navbar">
             <a className="navbar-brand" href="/" tabIndex="0">
-              <img className="logo" src={tretton37_logga} alt="Tretton 37 loga, redirect to home view when clicked"/>
+              <img className="logo" src={tretton37_logga} alt="Tretton 37 logo, redirect to home view when clicked"/>
             </a>
         </nav>
     )
