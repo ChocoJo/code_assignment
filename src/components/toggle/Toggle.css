@@ -6,3 +6,7 @@
 [data-selected="false"], [data-selected="false"]:hover  {
     color: #fff;
 }
+
+.button-container {
+    display: inline-block;
+}

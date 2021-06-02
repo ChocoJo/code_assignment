@@ -1,6 +1,7 @@
 import React from 'react'
 import { Card } from '../../card/Card';
 import { BrowserView, MobileView } from 'react-device-detect';
+import './DisplayGrid.css';
 
 export const DisplayGrid = ({employees}) => {
     return (

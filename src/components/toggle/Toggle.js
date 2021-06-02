@@ -49,28 +49,30 @@ export const Toggle = ({ displayGrid, setDisplayGrid }) => {
   return (
     <BrowserView>
       <div className="toggle-btns center">
+        <div className="button-container" tabIndex="2">
         <button
         data-selected="false"
           className="btn list"
           id="display-list"
           aria-label="Display list view"
           aria-pressed="false"
-          tabIndex="2"
           onClick={() => toggleOff(false)}
         >
           <i className="fa fa-list"></i>
         </button>
+        </div>
+        <div className="button-container" tabIndex="2">
         <button
         data-selected="true"
           className="btn grid"
           id="display-grid"
           aria-label="Display grid view"
           aria-pressed="true"
-          tabIndex="2"
           onClick={() => toggleOn(true)}
         >
           <i className="fa fa-th-large"></i>
         </button>
+        </div>
       </div>
     </BrowserView>
   );
