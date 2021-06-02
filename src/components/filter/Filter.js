@@ -2,7 +2,7 @@ import React from "react";
 import { BrowserView, isMobileOnly, MobileView } from "react-device-detect";
 import "./Filter.css";
 
-export const Filter = () => {
+export const Filter = ({filterByName, setFilterByName, setFilterByOffice}) => {
   return (
     <>
     { isMobileOnly ? (
@@ -14,9 +14,11 @@ export const Filter = () => {
             name="filter"
             type="text"
             aria-describedby="Search bar"
+            value={filterByName}
             autoComplete="off"
+            onChange={(event) => setFilterByName(event.target.value)}
           />
-          <select tabIndex="3">
+          <select tabIndex="3" onChange={(event) => setFilterByOffice(event.target.value)}>
             <option value="All">All</option>
             <option value="Borlänge">Borlänge</option>
             <option value="Helsingborg">Helsingborg</option>
@@ -37,9 +39,10 @@ export const Filter = () => {
             type="text"
             aria-describedby="Search bar"
             autoComplete="off"
- 
+            value={filterByName}
+            onChange={(event) => setFilterByName(event.target.value)}
           />
-          <select className="office-select" tabIndex="3">
+          <select className="office-select" tabIndex="3" onChange={(event) => setFilterByOffice(event.target.value)}>
             <option value="All">All</option>
             <option value="Borlänge">Borlänge</option>
             <option value="Helsingborg">Helsingborg</option>

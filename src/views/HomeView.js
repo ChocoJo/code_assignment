@@ -5,6 +5,7 @@ import { Dashboard } from '../components/dashboard/Dashboard';
 export const HomeView = () => {
   const [employees, setEmployees] = useState([]);
   const [displayGrid, setDisplayGrid] = useState(true);
+  const [filterByName, setFilterByName] = useState('');
 
   const getAllEmployees = async () => {
     await EmployeesServiceAPI.getAllEmployees()
@@ -26,6 +27,7 @@ export const HomeView = () => {
       displayGrid={displayGrid}
       setDisplayGrid={setDisplayGrid}
       employees={employees.data}
+      filterByName={filterByName} setFilterByName={setFilterByName}
     />) 
     : (
       <h1>Loading...</h1>
