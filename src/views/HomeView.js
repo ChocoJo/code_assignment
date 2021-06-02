@@ -13,7 +13,6 @@ export const HomeView = () => {
   const getAllEmployees = async () => {
     await EmployeesServiceAPI.getAllEmployees()
       .then((response) => {
-        console.log("HOMEVIEW: ", response);
         setEmployees(response);
       })
       .catch((error) => console.log(error));
@@ -28,7 +27,7 @@ export const HomeView = () => {
   }
 
   useEffect(() => {
-   //getAllEmployees();
+   getAllEmployees();
    setBackground();
    // eslint-disable-next-line 
   }, []);
