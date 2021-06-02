@@ -3,6 +3,7 @@ import "./Card.css";
 import no_profile_pic from '../../utils/images/no_profile_pic.png';
 import sweden from '../../utils/images/flag/sweden.png';
 import slovenia from '../../utils/images/flag/slovenia.png';
+import { SocialMedia } from "../socialmedia/SocialMedia";
 
 export const Card = ({ employee, index }) => {
   return (
@@ -27,6 +28,7 @@ export const Card = ({ employee, index }) => {
           </span>) : (<span className="office-location" tabIndex={index + 4} aria-label={`office ${employee.office}`}><img className="flag-icon" src={slovenia} alt="flag of slovenia"/> {employee.office}
           </span>)}
           </div>
+          <SocialMedia employee={employee} index={index}/>
         </div>
       </div>
     </div>
