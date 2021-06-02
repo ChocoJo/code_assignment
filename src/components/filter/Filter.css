@@ -1,0 +1,7 @@
+#mobile-view-filter:focus, #browser-view-filter:focus {
+    border: 3px solid rgb(1, 54, 153);
+}
+
+.office-select {
+    margin-left: 1px !important;
+}
