@@ -1,0 +1,37 @@
+.loading-text {
+    padding: 2em;
+    font-size: 5em;
+    text-align: center;
+    font-weight: 600;
+    color: #353239;
+  }
+  
+  .loading-text span span {
+    color: #80C565;
+    position: relative;
+    bottom: -1em;
+    opacity: 0;
+    animation: move-text 2s forwards;
+    animation-iteration-count: infinite;
+  }
+  .loading-text span span {
+     color: #80C565; 
+    }
+
+  
+  @keyframes move-text {
+    0% {
+      bottom: -0.2em;
+      opacity: 1;
+    }
+    
+    50% {
+      bottom: 0.2em;
+    }
+  
+    100% {
+      bottom: 0;
+      opacity: 1;
+    }
+    
+  }
