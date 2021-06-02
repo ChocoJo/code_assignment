@@ -1,5 +1,6 @@
+
 .card {
-    box-shadow: 0 3px 4px rgba(0, 0, 0, 0.15), 0 2px 3px rgba(0, 0, 0, 0.27);
+    box-shadow: 0 3px 4px rgba(0, 0, 0, 0.12), 0 2px 3px rgba(0, 0, 0, 0.24);
     transition: all 0.3s cubic-bezier(0.25, 0.0, .25, 1); 
     border: 2px solid #02386d54;
 }
@@ -10,3 +11,52 @@
     color: #80c565;
     transition: .5s;
 }
+
+.card:focus, .card-img:focus, .card-title:focus, .office-location:focus {
+    transform: scale(1.03);
+    color: #80C565;
+    transition: .5s;
+    font-size: 18px;
+    text-shadow: 0.5px 0.5px #80C565;
+}
+
+.portrait-container{
+    width: 50%;
+}
+
+.card-img, .card-img-no-profile {
+    max-height: 150px;
+    position: absolute;
+    width: 115px;
+}
+
+.card-img-no-profile {
+    height: 142px;
+    width: 122px;
+    border-radius: 2%;
+}
+
+.info-container {
+    flex-direction: column;
+    height: 170px;
+    position: static;
+    text-align: left;
+    padding: 10px 10px 10px 135px;
+    width: 100%;
+    vertical-align: top;
+}
+
+.card-title {
+    font-size: 1.1rem;
+    word-spacing: 9999px;
+}
+
+.flag-icon {
+    max-height: 15px;
+}
+
+@media only screen and (max-width: 1343px) {
+    .col-md-4 {
+      min-width: 329px;
+    }
+  }
