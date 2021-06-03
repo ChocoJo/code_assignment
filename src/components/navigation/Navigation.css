@@ -3,15 +3,23 @@
     padding-bottom: 0px;
 }
 
-.navbar-brand:hover, .navbar-brand:focus {
+.navbar-brand {
+    text-decoration: none;
+    color: #80C565;
+    text-align: center;
+}
+
+.navbar-brand:hover {
+    text-decoration: none;
+    color: #80C565;
     transform: scale(1.3);
 }
 
+.navbar-brand:focus{
+    transform: scale(1.3);
+    border: 3px solid #80C565;
+}
 .logo {
     height: 60px;
     padding-left: 35%;
-}
-
-.logo-container {
-    display: inline-block;
 }

@@ -32,7 +32,7 @@ export const Filter = ({filterByName, setFilterByName, setFilterByOffice}) => {
        (<BrowserView>
         <div className="input-group mb-3">
           <input
-            tabIndex="3"
+          tabIndex="2"
             placeholder="Search Employee"
             id="browser-view-filter"
             name="filter"
@@ -42,7 +42,7 @@ export const Filter = ({filterByName, setFilterByName, setFilterByOffice}) => {
             value={filterByName}
             onChange={(event) => setFilterByName(event.target.value)}
           />
-          <select className="office-select" tabIndex="3" onChange={(event) => setFilterByOffice(event.target.value)}>
+          <select className="office-select" tabIndex="2" onChange={(event) => setFilterByOffice(event.target.value)}>
             <option value="All">All</option>
             <option value="Borlänge">Borlänge</option>
             <option value="Helsingborg">Helsingborg</option>

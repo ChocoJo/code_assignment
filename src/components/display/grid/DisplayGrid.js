@@ -10,7 +10,6 @@ export const DisplayGrid = ({employees}) => {
         <div className="row">
             {employees.map((employee, index) => (
                 <Card 
-                key={employee.name}
                 employee={employee}
                 index={index}
                 />
@@ -21,7 +20,6 @@ export const DisplayGrid = ({employees}) => {
         <div className="row">
         {employees.map((employee, index) => (
             <Card 
-            key={employee.name}
             employee={employee}
             index={index}
             />

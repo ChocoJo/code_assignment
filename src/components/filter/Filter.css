@@ -5,3 +5,7 @@
 .office-select {
     margin-left: 1px !important;
 }
+
+#browser-view-filter:focus, .office-select:focus {
+    border: 5px solid #80C565;;
+}

@@ -1,75 +1,103 @@
-import React from 'react';
-import './SocialMedia.css';
+import "./SocialMedia.css";
 
-export const SocialMedia = ({employee, index}) => {
-    return (
-        <div className="social-media-container">
-            
-        {employee.gitHub !== null ? (
-          <div className="github-enabled" aria-label={`link to ${employee.name} github page`}>
-            <a
-              href={`https://github.com/${employee.gitHub}`}
-              tabIndex={index + 4} >
-               <span className="fa-stack fa-lg">
-              <i className="fa fa-circle fa-stack-2x"></i>
-              <i className="fab fa-github fa-stack-1x fa-inverse"></i>
-              </span>
-            </a>
-          </div>
-        ) : (
-          <div className="github-disabled">
-            <button href="#" onClick={(e) => e.preventDefault()}>
+export const SocialMedia = ({ employee, index }) => {
+
+  const handleKeyPress = (e, socialmedia) => {
+    console.log('socialmedia', socialmedia);
+    console.log('event', e);
+    if (e.key === 'Enter') {
+      switch(socialmedia) {
+        case 'gitHub':
+          window.open(`https://github.com/${employee.gitHub}`,"_self");
+          break;
+        case 'twitter':
+          window.open(`https://twitter.com/${employee.twitter}`,"_self");
+          break;
+        case 'linkedin':
+          window.open(`https://linkedin.com${employee.linkedIn}`,"_self");
+          break;
+        default: 
+          void(0);
+      }  
+    }
+  };
+
+  return (
+    <div className="social-media-container">
+      {employee.gitHub !== null ? (
+        <div
+          onKeyPress={e => handleKeyPress(e, 'gitHub')}
+          className="github-enabled"
+          aria-label={`link to github page`}
+          tabIndex={index + 4}
+        >
+          <button className="github-button">
             <span className="fa-stack fa-lg">
               <i className="fa fa-circle fa-stack-2x"></i>
               <i className="fab fa-github fa-stack-1x fa-inverse"></i>
-              </span>
+            </span>
             </button>
-          </div>
-        )}
-
-        {employee.twitter !== null ? (
-          <div className="twitter-enabled" aria-label={`link to ${employee.name} twitter page`}>
-            <a
-              href={`https://twitter.com/${employee.twitter}`}
-              tabIndex={index + 4}>
-              <span className="fa-stack fa-lg">
+        </div>
+      ) : (
+        <div className="github-disabled" tabIndex="-1">
+          <button href="#" onClick={(e) => e.preventDefault()}>
+            <span className="fa-stack fa-lg">
               <i className="fa fa-circle fa-stack-2x"></i>
-              <i className="fab fa-twitter fa-stack-1x fa-inverse"></i>
-              </span>
-            </a>
-          </div>
-        ) : (
-          <div className="twitter-disabled">
-            <button href="#" onClick={(e) => e.preventDefault()}>
+              <i className="fab fa-github fa-stack-1x fa-inverse"></i>
+            </span>
+          </button>
+        </div>
+      )}
+
+      {employee.twitter !== null ? (
+        <div
+        onKeyPress={e => handleKeyPress(e, 'twitter')}
+        tabIndex={index + 4}
+          className="twitter-enabled"
+          aria-label={`link to twitter page`}
+        >
+          <button className="twitter-button">
             <span className="fa-stack fa-lg">
               <i className="fa fa-circle fa-stack-2x"></i>
               <i className="fab fa-twitter fa-stack-1x fa-inverse"></i>
-              </span>
+            </span>
             </button>
-          </div>
-        )}
-
-        {employee.linkedIn !== null ? (
-          <div className="linkedin-enabled" aria-label={`link to ${employee.name} linkedIn page`}>
-            <a
-              href={`https://linkedin.com${employee.linkedIn}`}
-              tabIndex={index + 4}>
-              <span className="fa-stack fa-lg">
+        </div>
+      ) : (
+        <div className="twitter-disabled">
+          <button href="#" onClick={(e) => e.preventDefault()}>
+            <span className="fa-stack fa-lg">
               <i className="fa fa-circle fa-stack-2x"></i>
-              <i className="fab fa-linkedin-in circle fa-stack-1x fa-inverse"></i>
-              </span>
-            </a>
-          </div>
-        ) : (
-          <div className="linkedin-disabled">
-            <button href="#" onClick={(e) => e.preventDefault()}>
+              <i className="fab fa-twitter fa-stack-1x fa-inverse"></i>
+            </span>
+          </button>
+        </div>
+      )}
+
+      {employee.linkedIn !== null ? (
+        <div
+          onKeyPress={e => handleKeyPress(e, 'linkedin')}
+          tabIndex={index + 4}
+          className="linkedin-enabled"
+          aria-label={`link to linkedIn page`}
+        >
+          <button className="linkedin-button">
             <span className="fa-stack fa-lg">
               <i className="fa fa-circle fa-stack-2x"></i>
               <i className="fab fa-linkedin-in circle fa-stack-1x fa-inverse"></i>
-              </span>
+            </span>
             </button>
-          </div>
-        )}
-      </div>
-    )
-}
+        </div>
+      ) : (
+        <div className="linkedin-disabled">
+          <button href="#" onClick={(e) => e.preventDefault()}>
+            <span className="fa-stack fa-lg">
+              <i className="fa fa-circle fa-stack-2x"></i>
+              <i className="fab fa-linkedin-in circle fa-stack-1x fa-inverse"></i>
+            </span>
+          </button>
+        </div>
+      )}
+    </div>
+  );
+};

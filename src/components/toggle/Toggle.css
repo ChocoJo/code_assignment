@@ -1,12 +1,16 @@
-[data-selected="true"], [data-selected="true"]:hover  {
+[data-selected="true"], [data-selected="true"]:hover {
     color: #80C565;
     transform: scale(1.2);
 }
 
-[data-selected="false"], [data-selected="false"]:hover  {
+[data-selected="false"], [data-selected="false"]:hover {
     color: #fff;
 }
 
 .button-container {
     display: inline-block;
+}
+
+.button-container:focus {
+    border: 3px solid #80C565;
 }

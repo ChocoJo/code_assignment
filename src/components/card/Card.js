@@ -10,8 +10,7 @@ export const Card = ({ employee, index }) => {
     <div className="col-md-4 col-sm-6 mb-3">
       <div className="card" tabIndex={index + 4}>
         <div className="card-body">
-          
-          {/*img*/}
+
           { employee.imagePortraitUrl !== null ? (<span className="portrait-container">
           <img className="card-img" alt={employee.name} src={employee.imagePortraitUrl} tabIndex={index + 4}/>
           </span>) : ( 
@@ -20,12 +19,12 @@ export const Card = ({ employee, index }) => {
           </span>)}
 
           <div className="info-container">
-          <h1 className="card-title" tabIndex={index + 4} aria-label={`name ${employee.name}` }>
+          <h1 className="card-title" tabIndex={index + 4}>
             {employee.name}
           </h1>
-         { employee.office !== 'Ljubljana' ? 
-         (<span className="office-location" tabIndex={index + 4} aria-label={`office ${employee.office}`}> <img className="flag-icon" src={sweden} alt="flag of sweden"/> {employee.office}
-          </span>) : (<span className="office-location" tabIndex={index + 4} aria-label={`office ${employee.office}`}><img className="flag-icon" src={slovenia} alt="flag of slovenia"/> {employee.office}
+         { employee.office !== 'Ljubljana' ?
+         (<span className="office-location" tabIndex={index + 4}> <img className="flag-icon" src={sweden} alt={`flag of sweden ${employee.office}`}/> {employee.office}
+          </span>) : (<span className="office-location" tabIndex={index + 4}><img className="flag-icon" src={slovenia} alt={`flag of slovenia ${employee.office}`}/><span>{employee.office}</span>
           </span>)}
           </div>
           <SocialMedia employee={employee} index={index}/>

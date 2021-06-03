@@ -6,7 +6,6 @@ export const DisplayList = ({ employees }) => {
     <div className="col">
     {employees.map((employee, index) => (
         <Card
-        key={employee.name}
         employee={employee}
         index={index}
         />

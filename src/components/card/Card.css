@@ -16,7 +16,7 @@
     transform: scale(1.03);
     color: #80C565;
     transition: .5s;
-    font-size: 18px;
+    font-size: 20px;
     text-shadow: 0.5px 0.5px #80C565;
 }
 
@@ -49,25 +49,6 @@
 .card-title {
     font-size: 1.1rem;
     word-spacing: 9999px;
-}
-
-.social-media-container {
-    display: flex;
-}
-
-.github-enabled .fa-stack, .twitter-enabled .fa-stack, .linkedin-enabled .fa-stack  {
-    color: black;
-    font-size: 13px;
-}
-
-.github-enabled:focus, .twitter-enabled:focus, .linkedin-enabled:focus {
-    transform: scale(1.3);
-    transition: .5s;
-}
-
-.github-disabled .fa-stack, .twitter-disabled .fa-stack, .linkedin-disabled .fa-stack {
-    color: rgb(170, 162, 162);
-    font-size: 13px;
 }
 
 .flag-icon {

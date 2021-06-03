@@ -46,7 +46,6 @@ export const Dashboard = ({ displayGrid, setDisplayGrid, employees , filterByNam
         }
         if (filterByName === "") {
           const locations = selectOfficeWithoutEmployeeName();
-          console.log("EMPLOYEE", locations);
           const filteredList = locations.filter((employee) =>
             employee.name.includes(filterByName)
           );
