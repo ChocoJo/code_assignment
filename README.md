@@ -18,14 +18,14 @@ An application should also be fast to use for the client. You should be able to 
 Lastly, in order to make the application feel more alive I implemented some animation and also made it possible to switch between a list and a grid view. 
 
 ### I decided to use the following stories:
-Keyboard only function
-Fancy animations.
-Responsive design, work on mobile and tablets.
-Screen reader functionality.
-Filter by name and office.
-Enable switch between a grid and a list view.
-Works in Chrome, Firefox & Edge.
-Works in E11.
+1. Keyboard only function
+2. Fancy animations.
+3. Responsive design, work on mobile and tablets.
+4. Screen reader functionality.
+5. Filter by name and office.
+6. Enable switch between a grid and a list view.
+7. Works in Chrome, Firefox & Edge.
+8. Works in E11.
 
 ## Instructions to use the application:
 1. Start by doing a git clone of the repository. 
